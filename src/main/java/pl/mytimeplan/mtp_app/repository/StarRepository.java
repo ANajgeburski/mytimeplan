@@ -10,7 +10,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Repository
 public class StarRepository {
     private static final AtomicInteger ID = new AtomicInteger(0);
-    private final ConcurrentMap<Integer, Star> stars = new ConcurrentHashMap<>();
+    private  ConcurrentMap<Integer, Star> stars = new ConcurrentHashMap<>();
+
+    public StarRepository() {
+    }
+
+    public StarRepository(ConcurrentMap<Integer, Star> stars) {
+        this.stars = stars;
+    }
 
     public Star findById(int id) {
         return stars.get(id);
@@ -32,5 +39,13 @@ public class StarRepository {
 
     public void delete(int id) {
         stars.remove(id);
+    }
+
+    public void setStars(ConcurrentMap<Integer, Star> stars) {
+        this.stars = stars;
+    }
+
+    public ConcurrentMap<Integer, Star> getStars() {
+        return stars;
     }
 }
