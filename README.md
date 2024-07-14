@@ -7,11 +7,11 @@ to the Star without adding said field to this class directly.
 Also deciding which approach should I take with error handling took me a moment
 because Spring Boot offers quite a few options.
 
-**#Technologies**
+#**Technologies**
 
 Project was written using Java 17, Spring Boot 3.3.1 and JUnit for testing.
 
-**#Setup**
+#**Setup**
 
 To run and test this project, please use commands below:
 
